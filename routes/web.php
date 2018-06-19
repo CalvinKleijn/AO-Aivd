@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', 'DashboardController@index');
-Route::get('overzicht', 'OverzichtController@index');
-Route::get('contact', 'ContactController@index');
-
-
+Route::get('/', 'StudentController@index')->name('index');
+Route::get('create', 'StudentController@create')->name('students.create');
+Route::post('store', 'StudentController@store')->name('students.store');
+Route::get('delete/{id}', 'StudentController@destroy')->name('students.destroy');
+Route::get('edit/{id}', 'StudentController@edit')->name('students.edit');
+Route::post('update/{id}', 'StudentController@update')->name('students.update');

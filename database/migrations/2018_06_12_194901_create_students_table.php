@@ -15,11 +15,12 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('student_name');
-            $table->string('student_progress');
-            $table->string('student_results');
-            $table->string('student_workingposture');
-            $table->string('student_support');
+            $table->string('naam');
+            $table->string('klas');
+            $table->string('voortgang');
+            $table->string('resultaten');
+            $table->string('werkhouding');
+            $table->string('extrahulp');
             $table->timestamps();
         });
     }
@@ -34,4 +35,3 @@ class CreateStudentsTable extends Migration
         Schema::dropIfExists('students');
     }
 }
-
